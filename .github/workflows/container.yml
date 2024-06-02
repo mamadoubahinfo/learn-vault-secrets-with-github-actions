@@ -1,0 +1,32 @@
+name: Container image build & push
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        
+      - name: Login to Docker Hub
+        run: mkdir -p ~/.docker
+        run: echo "${{ secrets.DOCKER_CONFIG }}" > ~/.docker/config.json  # <- maybe adapt here
+
+      - name: Build and push LB image
+        uses: docker/build-push-action@v3
+        with:
+          file: ./Dockerfile
+          platforms: linux/amd64,linux/arm64/v8
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/helloworld:latest  # <- maybe adapt here
+
