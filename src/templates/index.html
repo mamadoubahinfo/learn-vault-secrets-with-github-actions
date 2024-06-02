@@ -9,7 +9,7 @@
             <p>💻 Tu es connecté depuis <strong>{{ hostname }}</strong>.</p>
             <p>⏳ L'heure actuelle est : <strong>{{ current_time }}</strong>.</p>
 	    <img src="{{ image_url }}" alt="image">
-	    {% if variable is defined %}<p>🤫 La valeur secrète est : <strong>{{ variable }}</strong></p>{% endif %}
+	    {% if secret_value is defined %}<p>🤫 La valeur secrète est : <strong>{{ secret_value }}</strong></p>{% endif %}
         </div>
     </body>
 </html>
