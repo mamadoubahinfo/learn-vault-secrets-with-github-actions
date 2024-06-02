@@ -27,7 +27,7 @@ def wellcome(name: str):
             <h1>Bienvenue {name}!</h1>
             <p>💻 Tu es connecté depuis <strong>{hostname}</strong>.</p>
             <p>⏳ L'heure actuelle est : <strong>{current_time}</strong>.</p>
-            <img src="{image__url}" alt="image">
+            <img src="{image_url}" alt="image">
         </body>
     </html>
     """
