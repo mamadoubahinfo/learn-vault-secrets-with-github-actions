@@ -41,3 +41,5 @@ def wellcome(request: Request, name: str):
                                             }
     )
 
+print("Define environment variable like IMAGE_URL or SECRET_VALUE.")
+

@@ -1,6 +1,6 @@
 # Learn Vault With GitHub Actions
 
-Simple API Python avec un endpoint type Hello World. L'image affichée peut être personalisée via la variable d'environnement `IMAGE_URL`.
+Simple API Python avec un endpoint type Hello World. L'image affichée peut être personalisée via la variable d'environnement `IMAGE_URL`. Un champ supplémentaire peut être affiché via la variable d'environnement `SECRET_VALUE` (la variable d'environnement sera affichée).
 
 ## Forkez-moi ! Clonez-moi !
 
@@ -61,6 +61,5 @@ docker run --rm -p 80:80 <image>
 ## Utilisation de Vault avec Kubernetes
 
 Intégration moins facile car le cluster est self-hosted.
-
 
 
