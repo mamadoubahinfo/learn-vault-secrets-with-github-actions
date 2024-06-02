@@ -1,6 +1,7 @@
 import socket
 import os
 from datetime import datetime
+from pathlib import Path
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -11,13 +12,13 @@ app = FastAPI(
     description="Basic API used by example in Vault learning course. Project for University of Picardie (Amiens, France) - Master's Degree."
 )
 
+BASE_DIR = Path(__file__).resolve().parent
 app.mount(
     "/static",
-    StaticFiles(directory=Path(__file__).parent.absolute() / "static"),
-    name="static",
+    StaticFiles(directory=BASE_DIR / "static"),
+    name="static"
 )
-
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory=BASE_DIR / "templates")
 
 @app.get("/livez")
 def alive():
@@ -32,6 +33,7 @@ def wellcome(request: Request, name: str):
 
     return templates.TemplateResponse(
         request=request, name="index.html", context={
+                                                "name": name,
                                                 "hostname": hostname,
                                                 "current_time": current_time,
                                                 "image_url": image_url,
