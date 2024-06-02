@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm64/v8
+          platforms: linux/amd64,linux/arm64/v8  # <- eventually adapt here
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/helloworld:latest  # <- maybe adapt here
+          tags: tanguynicolas/helloworld:latest  # <- adapt here
 

@@ -51,9 +51,13 @@ Sélectionnez le bon dépôt.
 
 Vérifier que le secret est correctement synced dans GitHub.
 
-## STEP 09: Adapter le code de la CI/CD (éventuellement)
+## STEP 09: Adapter le code de la CI/CD
 
-Le nom de votre secret, le nom de votre private repository.
+Votre username Docker Hub.
+
+Peut-être le nom de votre secret et le nom de votre private repository.
+
+Éventuellement, ne buildez que pour votre architecture afin d'accélérer l'exécution du pipeline (la step de build).
 
 ## STEP 10: Testez de modifier le code de l'API
 
