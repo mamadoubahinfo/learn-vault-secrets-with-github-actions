@@ -52,6 +52,12 @@ Peut-être le nom de vos secrets et le nom de votre private repository.
 
 Ça fonctionne ? Le pipeline est vert ? Votre image Docker est bien mise à jour ?
 
+Testez aussi en local.
+
+```shell
+docker run --rm -p 80:80 <image>
+```
+
 ## Utilisation de Vault avec Kubernetes
 
 Intégration moins facile car le cluster est self-hosted.

@@ -22,7 +22,12 @@ def wellcome(name: str):
     <html>
         <head>
             <title>👋 Bienvenue {name}</title>
-           <style>
+                <style>
+                    body, html {
+                    height: 100%;
+                    margin: 0;
+                    font-family: Arial, sans-serif;
+                }
                 .centered-content {
                     min-height: 100%;
                     display: flex;
