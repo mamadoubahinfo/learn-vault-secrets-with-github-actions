@@ -22,12 +22,24 @@ def wellcome(name: str):
     <html>
         <head>
             <title>👋 Bienvenue {name}</title>
+           <style>
+                .centered-content {
+                    min-height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    text-align: center;
+                }
+            </style>
         </head>
         <body>
-            <h1>Bienvenue {name}!</h1>
-            <p>💻 Tu es connecté depuis <strong>{hostname}</strong>.</p>
-            <p>⏳ L'heure actuelle est : <strong>{current_time}</strong>.</p>
-            <img src="{image_url}" alt="image">
+            <div class="centered-content">
+                <h1>Bienvenue {name}!</h1>
+                <p>💻 Tu es connecté depuis <strong>{hostname}</strong>.</p>
+                <p>⏳ L'heure actuelle est : <strong>{current_time}</strong>.</p>
+                <img src="{image_url}" alt="image">
+            </div>
         </body>
     </html>
     """
